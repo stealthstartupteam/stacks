@@ -490,31 +490,52 @@ Outputs:
   StandardVpcId:
     Value: !Ref VPC
     Export:
-      Name: dev-vpc-VPCId
+      Name: !Join 
+        - '-'
+        - - !Ref 'AWS::StackName'
+          - VPCId
   StandardPrivateSubnet3Id:
     Value: !Ref PrivateSubnet3Id
     Export:
-      Name: dev-vpc-PrivateSubnet3Id
+      Name: !Join 
+        - '-'
+        - - !Ref 'AWS::StackName'
+          - PrivateSubnet3Id
   StandardPrivateSubnet2Id:
     Value: !Ref PrivateSubnet2Id
     Export:
-      Name: dev-vpc-PrivateSubnet2Id
+      Name: !Join 
+        - '-'
+        - - !Ref 'AWS::StackName'
+          - PrivateSubnet2Id
   StandardPrivateSubnet1Id:
     Value: !Ref PrivateSubnet1Id
     Export:
-      Name: dev-vpc-PrivateSubnet1Id 
+      Name: !Join 
+        - '-'
+        - - !Ref 'AWS::StackName'
+          - PrivateSubnet1Id 
   StandardPublicSubnet1Id:
     Value: !Ref PublicSubnet1Id
     Export:
-      Name: dev-vpc-PublicSubnet1Id
+      Name: !Join 
+        - '-'
+        - - !Ref 'AWS::StackName'
+          - PublicSubnet1Id
   StandardPublicSubnet2Id:
     Value: !Ref PublicSubnet2Id
     Export:
-      Name: dev-vpc-PublicSubnet2Id
+      Name: !Join 
+        - '-'
+        - - !Ref 'AWS::StackName'
+          - PublicSubnet2Id
   StandardPublicSubnet3Id:
     Value: !Ref PublicSubnet3Id
     Export:
-      Name: dev-vpc-PublicSubnet3Id
+      Name: !Join 
+        - '-'
+        - - !Ref 'AWS::StackName'
+          - PublicSubnet3Id
   PrivateSubnet3Id:
     Value: !Ref PrivateSubnet3Id
     Export:
